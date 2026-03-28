@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # ListasEnlazadas
 
 Proyecto de apoyo para **Programacion 3** con implementaciones propias de:
@@ -80,3 +81,6 @@ para que los estudiantes los implementen directamente en cada estructura.
 - Validaciones de entrada y manejo de estados vacios.
 - Metodos de apoyo para visualizacion y depuracion.
 - Implementacion de estructuras **100% manual**, sin uso de `java.util.*`.
+=======
+# ListaEnlazadaSimple
+>>>>>>> d3d5291caa588586630b8f4fd50d2cac72295bad
