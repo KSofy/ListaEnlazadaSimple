@@ -140,6 +140,25 @@ public class SinglyLinkedList<T> {
          * Cambiar el orden de la lista, por ejemplo: 2->4->5-6
          * Lista invertido: 6->5->4->2
          */
+    public void invert() {
+        SimpleNode<T> previous = null;
+        SimpleNode<T> current = head;
+        SimpleNode<T> next = null;
+
+        // Recorremos la lista
+        while (current != null) {
+            next = current.getNext();   
+            current.setNext(previous);  
+            previous = current;         
+            current = next;             
+        }
+
+        
+        tail = head;
+        head = previous;
+    }
+
+
         
         /**
          * RETO 4:

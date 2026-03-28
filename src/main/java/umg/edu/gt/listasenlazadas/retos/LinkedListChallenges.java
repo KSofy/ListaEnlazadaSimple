@@ -11,6 +11,9 @@ public final class LinkedListChallenges {
         System.out.println("=== RETOS DE IMPLEMENTACION ===");
         challenge1CountOccurrences();
         System.out.println();
+        challenge3Invert();
+        System.out.println();
+
 
     }
 
@@ -30,6 +33,20 @@ public final class LinkedListChallenges {
 
         
     }
+    
+    private static void challenge3Invert() {
+        SinglyLinkedList<Integer> numeros = new SinglyLinkedList<>();
+        numeros.addLast(2);
+        numeros.addLast(4);
+        numeros.addLast(5);
+        numeros.addLast(6);
+
+        System.out.println("Reto 3 - Invertir lista");
+        System.out.println("Original: " + numeros);
+        numeros.invert();
+        System.out.println("Invertida: " + numeros);
+    }
+
 
     
 }
