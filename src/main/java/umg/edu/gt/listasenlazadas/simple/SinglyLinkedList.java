@@ -125,8 +125,12 @@ public class SinglyLinkedList<T> {
          * Reto 2 
          * Limpiar la lista
          */
-        
-        	
+    public void clean() {
+    	tail = null;
+    	head = null;
+    	size = 0;
+
+    }
        
         
         /**
