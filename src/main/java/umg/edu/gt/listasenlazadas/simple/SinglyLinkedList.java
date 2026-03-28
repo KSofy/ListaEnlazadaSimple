@@ -121,15 +121,22 @@ public class SinglyLinkedList<T> {
     }        	
 
        
-        /**
-         * Reto 2 
-         * Limpiar la lista
-         */
-    public void clean() {
-    	tail = null;
-    	head = null;
-    	size = 0;
+    public int clean() {
+        int removed = 0;
+        SimpleNode<T> current = head;
 
+        while (current != null) {
+            SimpleNode<T> next = current.getNext();
+            current.setNext(null);
+            current = next;
+            removed++;
+        }
+
+        head = null;
+        tail = null;
+        size = 0;
+
+        return removed;
     }
        
         
