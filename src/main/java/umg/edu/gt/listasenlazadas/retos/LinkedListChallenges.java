@@ -11,6 +11,8 @@ public final class LinkedListChallenges {
         System.out.println("=== RETOS DE IMPLEMENTACION ===");
         challenge1CountOccurrences();
         System.out.println();
+        challenge2Clean(); 
+        System.out.println();
         challenge3Invert();
         System.out.println();
         challenge4RemoveDuplicates();
@@ -35,7 +37,24 @@ public final class LinkedListChallenges {
 
         
     }
-    
+
+    private static void challenge2Clean() {
+        SinglyLinkedList<String> eventos = new SinglyLinkedList<>();
+        eventos.addLast("A");
+        eventos.addLast("B");
+        eventos.addLast("C");
+
+        System.out.println("Reto 2 - Limpiar lista");
+        System.out.println("Antes: " + eventos + " size: " + eventos.size());
+
+        try {
+            int eliminados = eventos.clean();
+            System.out.println("Nodos eliminados: " + eliminados);
+            System.out.println("Después: " + eventos + " size: " + eventos.size());
+        } catch (UnsupportedOperationException ex) {
+            System.out.println(ex.getMessage());
+        }
+    }
     private static void challenge3Invert() {
         SinglyLinkedList<Integer> numeros = new SinglyLinkedList<>();
         numeros.addLast(2);
