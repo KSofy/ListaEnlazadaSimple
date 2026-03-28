@@ -171,31 +171,24 @@ public class SinglyLinkedList<T> {
          * RETO 4:
          * Eliminar duplicados
          */
-    public void removeDuplicates() {
+    public int removeDuplicates() { 
+        int removedCount = 0; 
         SimpleNode<T> current = head;
 
         while (current != null) {
             SimpleNode<T> runner = current;
-            
-            
             while (runner.getNext() != null) {
-                if (isSameValue(current.getValue(), (T) runner.getNext().getValue())) {
-                    
-                    SimpleNode<T> duplicate = runner.getNext();
-                    runner.setNext(duplicate.getNext());
-                    
-                    
-                    if (duplicate == tail) {
-                        tail = runner;
-                    }
+                if (isSameValue(current.getValue(), runner.getNext().getValue())) {
+                    runner.setNext(runner.getNext().getNext());
                     size--;
+                    removedCount++; // Cada vez que saltamos un nodo, sumamos 1
                 } else {
-                    
                     runner = runner.getNext();
                 }
             }
             current = current.getNext();
         }
+        return removedCount; 
     }
 
 
