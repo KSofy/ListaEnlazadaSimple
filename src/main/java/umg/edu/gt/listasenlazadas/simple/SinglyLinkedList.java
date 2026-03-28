@@ -106,14 +106,19 @@ public class SinglyLinkedList<T> {
      */
     
     public int countOccurrences(T value) {
+        int count = 0;
+        SimpleNode<T> current = head;
 
-        throw new UnsupportedOperationException(
+        // Recorrido de nodos lineal O(n)
+        while (current != null) {
+                        if (isSameValue(current.getValue(), value)) {
+                count++;
+            }
+                        current = current.getNext();
+        }
 
-                "TODO RETO: Implementar countOccurrences(T value) "
-
-                + "en SinglyLinkedList.");
-
-    } 
+        return count;
+    }        	
 
        
         /**
